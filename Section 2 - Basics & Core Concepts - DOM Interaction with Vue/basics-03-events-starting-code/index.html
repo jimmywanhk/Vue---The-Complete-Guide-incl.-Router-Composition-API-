@@ -19,9 +19,13 @@
     <section id="events">
       <h2>Events in Action</h2>
       <!-- add or add() is also acceptable here <button v-on:click="add()">Add</button> -->
-      <button v-on:click="add">Add</button>
-      <button v-on:click="reduce">Reduce</button>
+      <button v-on:click="add(5)">Add 5</button>
+      <button v-on:click="reduce(5)">Substract 5</button>
       <p>Result: {{ counter }}</p>
+      <input type="text" v-on:input="setName" />
+      <br />
+      <input type="text" v-on:input="setName2($event, 'Wan')" />
+      <p>Your Name: {{name}}</p>
     </section>
   </body>
 </html>
