@@ -18,9 +18,15 @@
     </header>
     <section id="user-goal">
       <h2>My Course Goal</h2>
-      <p>{{courseGoal}}</p>
+      <p>{{ courseGoal }}</p>
+      <p>{{ outputGoal() }}</p>
+      <p>{{ 1 + 1 }}</p>
+      <p>{{ Math.random() }}</p>
+      <!-- complex code doesn't work -> <p>{{ if(true) return 'Y'; else return 'N' }}</p> -->
       <!-- the double curly brace syntax is only available between opening and closing HTML tags -->
-      <p>Learn more about <a href="{{ vueLink }}">about Vue</a>.</p>
+      <!-- v-bind is used to set the value of an attribute on an HTML element -->
+      <p>Learn more about <a v-bind:href="vueLink">about Vue</a>.</p>
+      <p></p>
     </section>
   </body>
 </html>
