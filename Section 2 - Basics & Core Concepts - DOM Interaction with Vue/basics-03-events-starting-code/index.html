@@ -20,12 +20,24 @@
       <h2>Events in Action</h2>
       <!-- add or add() is also acceptable here <button v-on:click="add()">Add</button> -->
       <button v-on:click="add(5)">Add 5</button>
-      <button v-on:click="reduce(5)">Substract 5</button>
+      <!-- right = right click -->
+      <button v-on:click.right="reduce(5)">Substract 5</button>
       <p>Result: {{ counter }}</p>
       <input type="text" v-on:input="setName" />
       <br />
-      <input type="text" v-on:input="setName2($event, 'Wan')" />
-      <p>Your Name: {{name}}</p>
+      <!-- keyup.enter = when "enter" is pressed -->
+      <input
+        type="text"
+        v-on:input="setName2($event, 'Wan')"
+        v-on:keyup.enter="confirmInput"
+      />
+      <p>Your Name: {{confirmedName}}</p>
+      <!-- <form v-on:submit="submitForm"> -->
+      <!-- event modifier can be used to change the default event behavior (e.g. Page reload when submitting form)  -->
+      <form v-on:submit.prevent="submitForm2">
+        <input type="text" />
+        <button>Sign Up</button>
+      </form>
     </section>
   </body>
 </html>
