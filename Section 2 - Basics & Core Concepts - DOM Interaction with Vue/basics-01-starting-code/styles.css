@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
 body {
@@ -35,7 +35,8 @@ header {
 #user-goal h2 {
   font-size: 2rem;
   border-bottom: 4px solid #ccc;
-  color: #4fc08d;
+  /* color: #4fc08d; */
+  color: rgb(80, 80, 80);
   margin: 0 0 1rem 0;
 }
 

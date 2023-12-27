@@ -2,7 +2,8 @@ const app = Vue.createApp({
   //data is a function to return an object
   data() {
     return {
-      courseGoal: "Finish the course and learn Vue!", //you can output anything here, e.g. string, integer, array and object
+      courseGoalA: "Finish the course and learn Vue!", //you can output anything here, e.g. string, integer, array and object
+      courseGoalB: "<h2>Master Vue and building amazing apps!</h2>",
       vueLink: "https://vuejs.org/",
     };
   },
@@ -11,9 +12,10 @@ const app = Vue.createApp({
     outputGoal() {
       const randomNumber = Math.random();
       if (randomNumber < 0.5) {
-        return "Learn Vue!";
+        //why you can use "this" syntax here? -> Vue takes all the data the data methods and merges into a global Vue instance object
+        return this.courseGoalA;
       } else {
-        return "Master Vue!";
+        return this.courseGoalB;
       }
     },
   },
